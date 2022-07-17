@@ -12,19 +12,63 @@
 }
 
 .vertical-center {
-	left: 50%;
+	left: 40%;
 	position: fixed;
 	top: 50%;
 	transform: translate(-50%, -100%);
+}
+
+.english-words {
 	font-size: 200px;
+}
+
+.english-sentences {
+	font-size: 80px;
+}
+
+.tamil-words {
+	font-size: 100px;
+}
+
+.tamil-sentences {
+	font-size: 60px;
+}
+
+.center {
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	top: 50%;
 }
 </style>
 <body>
 	<button id="btn">Next</button>
-	<textarea id="words" rows="2" cols="50"></textarea>
 
+	<div id="input">
+	<p>Please select the Language: </p>
+	<input type="radio" id="english" name="language" value="english">
+	<label for="english">ENGLISH</label>
+	<br>
+	<input type="radio" id="tamil" name="language" value="tamil">
+	<label for="tamil">TAMIL</label>
+	<br>
+	<p>Please select the type of reading: </p>
+	<input type="radio" id="words" name="type_of_reading" value="words">
+	<label for="english">WORDS</label>
+	<br>
+	<input type="radio" id="sentences" name="type_of_reading" value="sentences">
+	<label for="tamil">SENTENCES</label>
+	<br>
+	<textarea id="content" rows="2" cols="50"></textarea>
+	</div>
+	
+	<table class="center">
+		<tr>
+			<h1 id="box" class=""></h1>
+		</tr>
+	</table>
 
-	<h1 id="box" class="vertical-center"></h1>
 
 	<script src="myscripts.js"></script>
 </body>
